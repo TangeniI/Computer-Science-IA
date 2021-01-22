@@ -15,7 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .models import List 
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+
+class UserRegister(UserCreationForm)
+    email  = forms.EmailField()
+
+class models
+    model = User 
+    EmailField = ['username', 'email', 'password','confirmationpasword']
